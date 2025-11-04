@@ -1,0 +1,133 @@
+/* Genel Sayfa Stilleri */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #141414; /* Netflix benzeri koyu arkaplan */
+    color: #ffffff; /* Beyaz metin */
+}
+
+a {
+    text-decoration: none; /* Linklerin alt çizgisini kaldır */
+    color: inherit; /* Linkler normal metin rengini alsın */
+}
+
+/* Header (Üst Başlık) */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #111;
+    border-bottom: 2px solid #E50914; /* Netflix kırmızısı */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Ana İçerik Alanı */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+/* === "NETFLIX" GRİD ALANI === */
+.match-grid {
+    display: grid;
+    /* Bu kısım önemlidir: 
+      En az 280px genişliğinde kartlar sığdır, sığdığı kadar yan yana koy.
+      Bu, sitenizi telefonda da uyumlu (responsive) yapar.
+    */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px; /* Kartlar arası boşluk */
+}
+
+/* === BİREYSEL MAÇ KARTI === */
+.match-card {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden; /* Taşan köşeleri (resim) gizle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    
+    /* Hover (üzerine gelme) animasyonu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.match-card:hover {
+    transform: scale(1.05); /* Kart hafifçe büyüsün */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.match-card img {
+    width: 100%;
+    height: auto;
+    display: block; /* Resim altındaki gereksiz boşluğu kaldırır */
+    border-bottom: 3px solid #E50914; /* Resim altına kırmızı çizgi */
+}
+
+.match-card .card-content {
+    padding: 20px;
+}
+
+.match-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.match-card p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 0;
+}
+
+/* Footer (Alt Kısım) */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* === ANALİZ SAYFASI STİLLERİ === */
+.analysis-content {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    line-height: 1.7; /* Daha okunaklı satır aralığı */
+}
+
+.analysis-content h1 {
+    color: #E50914;
+}
+
+.analysis-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #E50914;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.back-link:hover {
+    background-color: #f40612;
+}
